@@ -1,0 +1,24 @@
+.login-form
+  %h2.heading Sign in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |form|
+    .form-group.login-in
+      .row
+        .col-md-3.col-sm-4
+          %label.input-text-bar.font-size-16 Email
+        .col-md-9.col-sm-8
+          = form.email_field :email, autofocus: true, hide_label: true, class: "login-input-field rounded-corner font-size-16"
+    .form-group.login-in.last-form-group
+      .row
+        .col-md-3.col-sm-4
+          %label.input-text-bar.font-size-16 Password
+        .col-md-9.col-sm-8
+          = form.password_field :password, hide_label: true, class: 'login-input-field rounded-corner font-size-16'
+    .checkbox-sec-info
+      .row
+        .col-sm-offset-2.col-sm-6
+          - if devise_mapping.rememberable?
+            = form.check_box :remember_me
+            = form.label :remember_me
+    .take-submit-sec
+      = form.submit 'Sign in', class: 'btn-style rounded-corner'
+  = render "devise/shared/links"

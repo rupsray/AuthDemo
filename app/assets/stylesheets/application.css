@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bootstrap
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap/theme';
+
+body {
+    font-family: "Gotham-Light";
+}
+
+.alert-alert {
+    @extend .alert-warning;
+}
+
+.alert-notice {
+    @extend .alert-info;
+}
+
+.navbar {
+    border-radius: 0px !important;
+}
+
+.caret {
+    border-top: 8px solid !important;
+    border-right: 8px solid transparent !important;
+    border-left: 8px solid transparent !important;
+}
+.login-form {
+    overflow: hidden;
+    z-index: 9999;
+    border-radius: 8px;
+    margin-top: 40px;
+    padding: 20px 40px 18px;
+    background: #fff;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    border: 3px solid grey !important;
+}
+.social-login a {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0076b7;
+    border-radius: 0px;
+}
+.centered {
+    text-align: center !important;
+}
+.font-size-16 {
+    font-size: 16px;
+}
+
+.rounded-corner {
+    border-radius: 5px;
+}
+.login-input-field {
+    width: 18em;
+}
+.btn-style {
+    width: 12em;
+    background-color: darkcyan;
+    color: white;
+    padding: 0.5em;
+    margin-bottom: 15px;
+}
+.login-form a:hover{
+    background-color: transparent !important;
+}
+.heading {
+    color: gray;
+    font-size: 1.5em;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.link-btn a{
+    width: 12em;
+    background-color: darkcyan;
+    color: white;
+    padding: 0.5em;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+.link-btn a:hover {
+    background-color: #40A8A9 !important;
+    text-decoration: none !important;
+}
